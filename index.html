@@ -3,11 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Web Accessibility</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <p>This is the starting point.</p>
+    <header id="header">
+      <div class="header-content">
+        <a href="#mainContent" class="skip-link">skip-link</a> <a href="#index">Home</a> <a href="#about">About</a>
+        <nav role="navigation" aria-label="mainMenu">
+        </nav>
+        
+      </div>
+    </header>
+    <main id="mainContent">
+    <section id="banner">
+      <img src="img/banner.png" alt="Banner" role="presentation" id="bannerImg" />
+    </section>
+    <section id="introduction">
+      <h1>Web Accessibility Quiz</h1>
+      <h2>Introduction</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eos ducimus doloremque reprehenderit? Impedit delectus voluptatum obcaecati dicta molestias saepe sed, ipsum vel quam, laudantium iure neque odio alias veniam aut amet vitae omnis dolor voluptate asperiores itaque! Optio debitis veritatis ipsum? Architecto magni porro esse autem blanditiis reiciendis. Assumenda suscipit, ipsam libero non quisquam aliquam a. Expedita dicta nemo quo deleniti nobis at nisi adipisci assumenda culpa maiores rerum, dignissimos sed eligendi quos rem incidunt suscipit quibusdam voluptatem in temporibus porro saepe facere dolorem! Ea vero ipsa quis placeat quas sapiente error similique architecto, aspernatur odit quos non, nemo esse corrupti nulla et deleniti, impedit ab commodi itaque voluptatum! Ipsum non ratione, quam accusantium error illum, neque dolor, corporis praesentium voluptas repudiandae ducimus. Sed minima dolore velit perspiciatis esse quis architecto ad aliquid, magni debitis deserunt tempora adipisci quod at ipsa nemo facilis animi. Maxime, nobis. Iste nobis asperiores, ab voluptatum aspernatur suscipit culpa numquam provident rem deserunt! Eius porro quia animi. Amet, nostrum ratione quam accusantium temporibus rerum! Eos nesciunt vitae explicabo illo, voluptas dolores fugit ad, iste ratione eveniet nisi labore similique enim accusamus cumque porro rem, impedit nobis magni placeat exercitationem sunt aliquid. Voluptas, quibusdam error?</p>
+      <div class="formControls introSection">
+        <button id="introContinue" type="button" class="submitButton">Button</button>
+        <input type="text" placeholder="Input" />
+      </div>
+    </section>
+    </main>
+
+    <footer role="contentInfo">
+      <div class="footerContent">
+        <nav role="navigation" aria-label="footer menu">
+          <ul>
+            <li><a href="#index">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>  
+        </nav>
+      </div>
+    </footer>
+
     <script src="js/main.js"></script>
   </body>
 </html>
