@@ -47,7 +47,7 @@ a:hover {
 header {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: flex-end
   height: 50px;
   background-color: var(--color-bg);
   padding: 10px 0;
