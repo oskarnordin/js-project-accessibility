@@ -83,9 +83,9 @@ const handleAnswerSubmission = () => {
             nextBtn.textContent = 'view results'
             nextBtn.addEventListener('click', () => {
                 if (quizScore === 1) {
-                    mainContent.innerHTML = `<h2>Quiz completed!</h2><p>You had ${quizScore} correct answer out of ${questions.length} questions.</p>`
+                    mainContent.innerHTML = `<h2>Results</h2><img src="img/results.png" alt="" role="presentation" class="result-img" id="result-img"/><p>${quizScore} correct answer out of ${questions.length} questions.</p>`
                 } else {
-                mainContent.innerHTML = `<h2>Quiz completed!</h2><p>You had ${quizScore} correct answers out of ${questions.length} questions.</p>`
+                mainContent.innerHTML = `<h2>Results</h2><img src="img/results.png" alt="" role="presentation" class="result-img" id="result-img"/><p>You had ${quizScore} correct answers out of ${questions.length} questions.</p>`
                 }
             })
         }
