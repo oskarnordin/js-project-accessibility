@@ -32,10 +32,7 @@ body {
 
 a {
   color: var(--color-text);
-}
-
-a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .headerContent {
@@ -47,12 +44,13 @@ a:hover {
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-end
+  justify-content: flex-end;
   height: 50px;
   background-color: var(--color-bg);
   padding: 10px 0;
   min-height: 50px;
   height: auto;
+  padding: var(--spacing-sm);
 }
 
 .headerInner {
@@ -68,9 +66,10 @@ header {
 h1 {
   color: var(--color-text);
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   padding: var(--spacing-sm);
   font-size: clamp(2rem, 5vw, 3rem);
+  padding: 0;
 }
 
 h3 {
@@ -112,7 +111,14 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: var(--spacing-sm);
+  padding: 20px 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+  width: 100%;
 }
 
 .cards {
@@ -172,11 +178,14 @@ hr {
   .headerContent {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: var(--spacing-xs);
+    align-items: flex-start;
   }
 
   h1 {
     font-size: 1.75rem; /* valfritt: mindre rubrik i mobilvy */
+    text-align: left;
   }
 }
 
