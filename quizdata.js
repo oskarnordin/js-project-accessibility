@@ -5,7 +5,7 @@ const questions = [
       options: ["Operable", "Perception", "Understandable"],
       correctAnswerIndex: 1,
       correctAnswerMessage: "Correct! The perception principle focuses on ensuring that users can access information through their senses.",
-      incorrectAnswerMessage: "Incorrect. The correct answer is the perception principle, which focuses on ensuring that users can access information through their senses."
+      incorrectAnswerMessage: "The correct answer is the perception principle, which focuses on ensuring that users can access information through their senses."
     },
     {
       id: 2,
