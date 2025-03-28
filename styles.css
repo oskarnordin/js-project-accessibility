@@ -27,9 +27,9 @@
 .skip-link {
   position: absolute;
   top: -40px;
-  left: 0;
-  background-color: var(--color-text);
-  color: var(--color-bg);
+  left: -999px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius);
   z-index: 100;
@@ -38,7 +38,8 @@
 }
 
 .skip-link:focus {
-  top: 0;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
 }
 
 body {
