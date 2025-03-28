@@ -54,11 +54,14 @@ const displayQuestion = () => {
     inputRadio.value = index; //check if user selected the correct answer
 
     const label = document.createElement("label"); //create a label element
+    label.classList.add("quiz-option");
     label.setAttribute("for", optionId); //links label to each option
     label.textContent = option; //set the label text to the current option
-
-    questionFieldset.appendChild(inputRadio);
+    label.prepend(inputRadio);
     questionFieldset.appendChild(label);
+
+    label.prepend(inputRadio); // lägg input inuti labeln
+    questionFieldset.appendChild(label); // lägg labeln i fieldset (och INTE input separat)
   });
 
   const feedbackDiv = document.createElement("div"); //create a div to display feedback messages
@@ -85,6 +88,17 @@ const handleAnswerSubmission = () => {
   const feedbackDiv = document.querySelector(".feedback-message"); //feedback message div
   const submitBtn = document.querySelector(".submit-btn"); //submit button
   const questionFieldset = submitBtn.parentNode; //finds the HTML element that contains the "Submit" button and stores it so we can add the "Next question" button there.
+  const allOptions = document.querySelectorAll(
+    `input[name="question-${currentQuestion.id}"]`
+  ); //all options for the current question
+  allOptions.forEach((input, index) => {
+    const label = input.parentElement;
+    if (index == currentQuestion.correctAnswerIndex) {
+      label.classList.add("correct");
+    } else if (input.checked) {
+      label.classList.add("incorrect");
+    }
+  });
 
   if (selectedOption) {
     //check if an option has been selected
