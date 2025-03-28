@@ -136,7 +136,7 @@ const handleAnswerSubmission = () => {
           //if the user has 0 or <1 show the message below
           resultMessage = `<p>You had ${quizScore} correct answers out of ${questions.length} questions.</p>`;
         }
-        mainContent.innerHTML = `<h2>Result</h2><img src="img/results.png" alt="" role="presentation" class="result-img" id="result-img"/>${resultMessage}`; //adds h2, image and result message to main
+        mainContent.innerHTML = `<div class="resultCard"><div class="container"><h2>Result</h2><img src="img/results.png" alt="" role="presentation" class="resultImg" id="resultImg"/>${resultMessage}</div></div>`; //adds h2, image and result message to main
 
         const backToMainBtn = document.createElement("button"); //create back to main button
         backToMainBtn.textContent = "Back to main"; // text in button
