@@ -21,6 +21,20 @@
       </div>
     </header>
     <main id="mainContent">
+
+      <section id="quiz-section" class="quiz-section" aria-hidden="true" style="display: none;">
+        <div id="question-container">
+          <fieldset id="option-fieldset" class="option-fieldset">
+            <legend id="question-text"></legend>
+            <div id="options-container">
+            </div>
+          </fieldset>
+          <button id="submit-btn">Submit</button>
+          <div id="feedback-area" role="alert" aria-live="polite"></div>
+          <button id="next-btn">Next question</button>
+        </div>
+      </section>
+
     <section id="banner">
       <button class="startQuiz" id="start-quiz-btn">Start Quiz</button>
       <img src="img/HQbanner.png" alt="" role="presentation" id="bannerImg" />
