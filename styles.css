@@ -178,6 +178,20 @@ p {
   background-color: #333;
 }
 
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+main h2 {
+  font-size: var(--font-size-base); /* eller sätt ett eget t.ex. 1.25rem */
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
 .quiz-option {
   display: flex;
   align-items: center;
@@ -202,15 +216,37 @@ p {
   height: 1rem;
 }
 
-/* Rätt svar */
+.submit-btn,
+.next-btn {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  font-family: inherit;
+}
+
+/* .submit-btn:hover,
+.submit-btn:focus-visible,
+.next-btn:hover,
+.next-btn:focus-visible {
+  background-color: #333;
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+} */
+
 .correct {
-  background-color: #c8e6c9; /* ljusgrönt */
+  background-color: #cde8c5; /* ljusgrönt */
   border-color: #2e7d32;
 }
 
-/* Fel svar */
 .incorrect {
-  background-color: #ffcdd2; /* ljusrött */
+  background-color: #eda7ad; /* ljusrött */
   border-color: #c62828;
 }
 
