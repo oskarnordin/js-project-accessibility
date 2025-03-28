@@ -178,6 +178,42 @@ p {
   background-color: #333;
 }
 
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: #fff;
+  border: 2px solid var(--color-text);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-size: var(--font-size-base);
+}
+
+.quiz-option:hover,
+.quiz-option:focus-within {
+  border-color: var(--color-text);
+}
+
+.quiz-option input[type="radio"] {
+  accent-color: var(--color-text);
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Rätt svar */
+.correct {
+  background-color: #c8e6c9; /* ljusgrönt */
+  border-color: #2e7d32;
+}
+
+/* Fel svar */
+.incorrect {
+  background-color: #ffcdd2; /* ljusrött */
+  border-color: #c62828;
+}
+
 .progress-container {
   margin-bottom: var(--spacing-sm);
   text-align: center;
