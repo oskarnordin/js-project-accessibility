@@ -335,7 +335,7 @@ footer {
   width: 100%;
   background-color: var(--color-bg);
   justify-content: center;
-align-items: center;
+  align-items: center;
 }
 
 hr {
