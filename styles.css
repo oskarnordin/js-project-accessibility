@@ -330,9 +330,12 @@ main h2 {
 }
 
 footer {
+  display: flex;
   height: 200px;
   width: 100%;
   background-color: var(--color-bg);
+  justify-content: center;
+align-items: center;
 }
 
 hr {
