@@ -97,6 +97,11 @@ h1 {
   padding: 0;
 }
 
+h2 {
+  margin-top: 10px;
+  font-size: var(--font-size-base);
+}
+
 h3 {
   margin-top: 10px;
   font-size: var(--font-size-base);
@@ -125,11 +130,14 @@ p {
   overflow: hidden;
 }
 
-.principesImg {
-  width: 100%;
+.principlesImg {
+  max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: var(--border-radius);
 }
+
 .aboutImg{
   width: 100%;
   height: 100%;
@@ -171,6 +179,7 @@ p {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   flex-basis: 100%;
+  background-color: #f9f9f9;
 }
 
 .aboutCard{

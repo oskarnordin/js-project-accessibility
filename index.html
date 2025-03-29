@@ -4,67 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Web Accessibility</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Web Accessibility Quiz</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header id="header">
       <div class="headerInner">
-        <h1>Web Accessibility Quiz</h1>
-      <div class="headerContent">
-        <nav role="navigation" aria-label="mainMenu">
-        <a href="#mainContent" class="skip-link">Skip to main content</a> <a href="index.html">Home</a> <a href="about.html">About</a>
-        </nav>
-      </div>
+        <h1 id="site-title">Web Accessibility Quiz</h1>
+        <div class="headerContent">
+          <nav aria-label="Main menu">
+            <a href="#mainContent" class="skip-link">Skip to main content</a> 
+            <a href="index.html">Home</a> 
+            <a href="about.html">About</a>
+          </nav>
+        </div>
       </div>
     </header>
-    <main id="mainContent">
-    <section id="banner">
-      <button class="startQuizButton" id="start-quiz-btn">Start Quiz</button>
-      <img src="img/HQbanner.png" alt="" role="presentation" id="bannerImg" />
-    </section>
-    <section id="introduction">
-      <div class="formControls introSection">
-        <div class="container">
-          <h2>Four Principles of Accessibility</h2>
-        <div class="cardsContainer">
 
-          <div class="cards">
-              <img src="img/HQprinciple1.png" class="principesImg" alt="A human head, symbolizing perception.">
-              <h3>Perception</h3>
-              <p>Information and user interface components must be presentable to users in ways they can perceive.</p>
+    <main id="mainContent">
+      <section id="banner">
+        <button class="startQuizButton" id="start-quiz-btn" aria-label="Start the web accessibility quiz">
+          Start Quiz
+        </button>
+        <img src="img/HQbanner.png" alt="" id="bannerImg" />
+      </section>
+
+      <section id="introduction" aria-labelledby="intro-heading">
+        <div class="formControls introSection">
+          <div class="container">
+            <h2 id="intro-heading">Four Principles of Accessibility</h2>
+            <div class="cardsContainer">
+              <div class="cards" role="listitem">
+                <img src="img/HQprinciple1.png" class="principlesImg" alt="A human head, symbolizing perception." />
+                <h3>Perception</h3>
+                <p>Information and user interface components must be presentable to users in ways they can perceive.</p>
+              </div>
+              <div class="cards" role="listitem">
+                <img src="img/HQprinciple2.png" class="principlesImg" alt="A car, symbolizing operable user interfaces." />
+                <h3>Operable</h3>
+                <p>User interface components and navigation must be operable by all users.</p>
+              </div>
+              <div class="cards" role="listitem">
+                <img src="img/HQprinciple3.png" class="principlesImg" alt="A brain-shaped cloud, symbolizing understandability." />
+                <h3>Understandable</h3>
+                <p>Information and the operation of the user interface must be understandable.</p>
+              </div>
+              <div class="cards" role="listitem">
+                <img src="img/HQprinciple4.png" class="principlesImg" alt="A keyboard, symbolizing robustness." />
+                <h3>Robust</h3>
+                <p>Content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive technologies.</p>
+              </div>
+            </div>
           </div>
-          <div class="cards">
-              <img src="img/HQprinciple2.png" class="principesImg" alt="A car, symbolizing operable user interfaces.">
-              <h3>Operable</h3>
-              <p>User interface components and navigation must be operable by all users.</p>
-          </div>
-          <div class="cards">
-              <img src="img/HQprinciple3.png" class="principesImg" alt="A brain-shaped cloud, symbolizing understandability.">
-              <h3>Understandable</h3>
-              <p>Information and the operation of the user interface must be understandable.</p>
-          </div>
-          <div class="cards">
-              <img src="img/HQprinciple4.png" class="principesImg" alt="A keyboard, symbolizing robust">
-              <h3>Robust</h3>
-              <p>Content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive technologies.</p>
-          </div>
-      </div>
         </div>
-      
-    </section>
+      </section>
     </main>
     <hr>
     <footer role="contentInfo">
       <div class="footerContent">
-        <nav role="navigation" aria-label="footer menu">
+        <nav aria-label="Footer menu">
           <p>&copy; 2025 Web Accessibility Quiz. All rights reserved.</p>
         </nav>
       </div>
     </footer>
-    
+
     <script src="quizdata.js"></script>
     <script src="js/main.js"></script>
   </body>
