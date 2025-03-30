@@ -164,16 +164,15 @@ p {
   align-items: center;
   justify-content: center;
   max-width: var(--max-width);
-  padding: 0 var(--spacing-sm);
+  padding: var(--spacing-sm);
   width: 100%;
-  margin: 0 auto; /* Centers it horizontally */
+  margin: auto;
   padding: 16px;
 }
 
 .cards {
   flex: 1 1 calc(25% - 20px);
-  max-width: 300px;
-  background-color: var(--color-bg);
+  max-width: 260px;
   text-align: center;
   padding: var(--spacing-sm);
   border-radius: 10px;
@@ -183,10 +182,14 @@ p {
 }
 
 .aboutCard{
+  text-align: center;
   width: 100%;
+  background-color: var(--color-bg);
+  background-color: #f9f9f9;
   padding: var(--spacing-sm);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  flex-basis: 100%;
 }
 
 .resultCard{
@@ -201,14 +204,14 @@ p {
   top: 50%; /* Adjust positioning */
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 200;
+  font-weight: bold;
   font-size: var(--font-size-base);
   color: var(--color-bg);
   background-color: var(--color-text);
   border: 1px solid var(--color-text);
   border-radius: var(--border-radius);
   cursor: pointer;
-  padding: var(--spacing-xs) var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-md);
   transition: background-color 0.3s ease;
   z-index: 1;
 }
@@ -240,6 +243,9 @@ p {
 
 fieldset {
   display: flex;
+  max-width: var(--max-width);
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: var(--spacing-sm);
   padding: var(--spacing-sm);
@@ -248,12 +254,14 @@ fieldset {
 
 main h2 {
   font-size: var(--font-size-base); /* eller sätt ett eget t.ex. 1.25rem */
-  margin-bottom: var(--spacing-sm);
+  margin: var(--spacing-sm);
   line-height: 1.4;
 }
 
 .quiz-option {
   display: flex;
+  width: 100%;
+  max-width: 400px;
   align-items: center;
   gap: var(--spacing-xs);
   background-color: #fff;
@@ -286,7 +294,7 @@ main h2 {
   font-size: var(--font-size-base);
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;
+  width: 200px;
   text-align: center;
   font-family: inherit;
 }
@@ -356,34 +364,54 @@ hr {
   margin: auto;
 }
 
-@media (max-width: 767px) {
-  .headerInner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-xs);
+@media (max-width: 768px) {
+.headerInner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+}
+
+.headerContent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 1.75rem; /* valfritt: mindre rubrik i mobilvy */
+  text-align: left;
+}
+
+.principlesImg{
+   display: none;
   }
 
-  .headerContent {
+.aboutImg{
+  display: none;
+}
+
+  .cardsContainer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-    align-items: flex-start;
+    justify-content: stretch; /* Ensures cards take full width */
+    gap: 20px;
+    padding: var(--spacing-sm);
+  }
+  
+  .cards {
+    width: 100%; /* Ensures full width */
+    max-width: 100%; /* Prevents any unintended restrictions */
   }
 
-  h1 {
-    font-size: 1.75rem; /* valfritt: mindre rubrik i mobilvy */
-    text-align: left;
-  }
-}
-
-@media (min-width: 768px) {
-  .cards {
-    flex-basis: calc(50% - 20px);
-  }
-}
-@media (min-width: 1024px) {
-  .cards {
-    flex-basis: calc(25% - 20px);
+  footer {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-color: var(--color-bg);
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg);
   }
 }
