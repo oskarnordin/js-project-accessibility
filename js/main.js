@@ -102,7 +102,7 @@ const handleAnswerSubmission = () => {
 
   if (selectedOption) {
     //check if an option has been selected
-    const selectedAnswer = selectedOption.value; //store the value of the selected option
+    const selectedAnswer = parseInt(selectedOption.value)//store the value of the selected option
 
     if (selectedAnswer === currentQuestion.correctAnswerIndex) {
       //Checks if selected option is correct in the quizdata.js
