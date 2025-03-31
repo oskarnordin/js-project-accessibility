@@ -126,7 +126,7 @@ const handleAnswerSubmission = () => {
         displayQuestion(); //calls displayQuestion function to display next question
       });
     } else {
-      nextBtn.textContent = "view results"; //sets text to view result if the user is on the last question
+      nextBtn.textContent = "View results"; //sets text to view result if the user is on the last question
       nextBtn.addEventListener("click", () => {
         let resultMessage = ""; //variable for result message
         if (quizScore === 1) {
