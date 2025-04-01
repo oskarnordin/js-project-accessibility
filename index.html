@@ -24,11 +24,40 @@
     </header>
 
     <main id="mainContent">
+
+      <section id="quiz-container" class="quiz-container" hidden>
+        <div class="progress-container" id="progress-container">
+          <div class="progress-text" id="progress-text"></div>
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+        <h2 id="question-heading"></h2>
+        <fieldset
+         class="question-fieldset" 
+         id="question-fieldset" 
+         aria-labelledby="question-heading">
+        </fieldset>
+        <div class="feedback-message" id="feedback-message" aria-live="polite" role="alert"></div>
+        <button class="submit-btn" id="submit-btn">Submit</button>
+        <button class="next-btn" id="next-btn" hidden>Next question</button>
+      </section>
+
+      <div class="resultCard" id="resultCard" hidden>
+        <div class="container">
+          <h2>Result</h2>
+          <img src="img/results.png" alt="" role="presentation" class="resultImg" id="resultImg"/>
+          <div class="result-message" id="resultMessage"></div>
+          <button class="back-to-main-btn" id="back-to-main-btn">Back to main</button>
+        </div>
+      </div>
+
+
       <section id="banner">
         <button class="startQuizButton" id="start-quiz-btn" aria-label="Start the web accessibility quiz">
           Start Quiz
         </button>
-        <img src="img/HQbanner.png" alt="" id="bannerImg" />
+        <img src="img/HQbanner.png" alt="" id="bannerImg"/>
       </section>
 
       <section id="introduction" aria-labelledby="intro-heading">
