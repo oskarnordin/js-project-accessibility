@@ -57,8 +57,6 @@ const renderOptions = () => {
 
 //Function to display question
 const displayQuestion = () => {
-  console.log("currentQuestionIndex:", currentQuestionIndex);
-  console.log("questions.length:", questions.length);
   quizContainer.hidden = false;
   bannerSection.style.display = 'none';
   introductionSection.hidden = true;
@@ -96,7 +94,7 @@ const handleAnswerSubmission = () => {
     `input[name="question-${currentQuestion.id}"]`
   );
 
-  if (selectedOption) { // Only apply styles if an option is selected
+  if (selectedOption) {
     applyAnswerStyles(allOptions, currentQuestion.correctAnswerIndex);
 
     const selectedAnswer = parseInt(selectedOption.value)
@@ -128,7 +126,6 @@ startQuizBtn.addEventListener("click", () => {
   quizScore = 0;
   displayQuestion();
 });
-
 
 nextBtn.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length - 1) {
