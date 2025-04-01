@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
     <header id="header">
       <div class="headerInner">
         <h1 id="site-title">Web Accessibility Quiz</h1>
         <div class="headerContent">
           <nav aria-label="Main menu">
-            <a href="#mainContent" class="skip-link">Skip to main content</a>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
           </nav>
@@ -27,7 +28,6 @@
     </header>
 
     <main id="mainContent">
-
       <section id="quiz-container" class="quiz-container" hidden>
         <div class="progress-container" id="progress-container">
           <div class="progress-text" id="progress-text"></div>
@@ -37,11 +37,16 @@
         </div>
         <h2 id="question-heading"></h2>
         <fieldset
-         class="question-fieldset" 
-         id="question-fieldset" 
-         aria-labelledby="question-heading">
-        </fieldset>
-        <div class="feedback-message" id="feedback-message" aria-live="polite" role="alert"></div>
+          class="question-fieldset"
+          id="question-fieldset"
+          aria-labelledby="question-heading"
+        ></fieldset>
+        <div
+          class="feedback-message"
+          id="feedback-message"
+          aria-live="polite"
+          role="alert"
+        ></div>
         <button class="submit-btn" id="submit-btn">Submit</button>
         <button class="next-btn" id="next-btn" hidden>Next question</button>
       </section>
@@ -49,12 +54,19 @@
       <div class="resultCard" id="resultCard" hidden>
         <div class="container">
           <h2>Result</h2>
-          <img src="img/results.png" alt="" role="presentation" class="resultImg" id="resultImg"/>
+          <img
+            src="img/results.png"
+            alt=""
+            role="presentation"
+            class="resultImg"
+            id="resultImg"
+          />
           <div class="result-message" id="resultMessage"></div>
-          <button class="back-to-main-btn" id="back-to-main-btn">Back to main</button>
+          <button class="back-to-main-btn" id="back-to-main-btn">
+            Back to main
+          </button>
         </div>
       </div>
-
 
       <section id="banner">
         <button
@@ -64,7 +76,7 @@
         >
           Start Quiz
         </button>
-        <img src="img/HQbanner.png" alt="" id="bannerImg"/>
+        <img src="img/HQbanner.png" alt="" id="bannerImg" />
       </section>
 
       <section id="introduction" aria-labelledby="intro-heading">
