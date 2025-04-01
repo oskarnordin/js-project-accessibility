@@ -94,10 +94,10 @@ const handleAnswerSubmission = () => {
     `input[name="question-${currentQuestion.id}"]`
   );
 
-applyAnswerStyles(allOptions, currentQuestion.correctAnswerIndex)
   if (selectedOption) {
-    const selectedAnswer = parseInt(selectedOption.value)
+    applyAnswerStyles(allOptions, currentQuestion.correctAnswerIndex);
 
+    const selectedAnswer = parseInt(selectedOption.value)
 
     if (selectedAnswer === currentQuestion.correctAnswerIndex) {
       feedbackMessage.textContent = currentQuestion.correctAnswerMessage;
@@ -109,10 +109,11 @@ applyAnswerStyles(allOptions, currentQuestion.correctAnswerIndex)
     submitBtn.hidden = true;
 
     if (currentQuestionIndex < questions.length - 1) {
+      nextBtn.textContent = "Next question"
       nextBtn.hidden = false;
     } else {
-      nextBtn.textContent = "View result";
       nextBtn.hidden = false;
+      nextBtn.textContent = "View result";
     }
   } else {
     feedbackMessage.textContent = "Please select an answer.";
@@ -125,7 +126,6 @@ startQuizBtn.addEventListener("click", () => {
   quizScore = 0;
   displayQuestion();
 });
-
 
 nextBtn.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length - 1) {
