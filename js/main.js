@@ -102,7 +102,7 @@ const handleAnswerSubmission = () => {
 
   if (selectedOption) {
     //check if an option has been selected
-    const selectedAnswer = parseInt(selectedOption.value)//store the value of the selected option
+    const selectedAnswer = selectedOption.value; //store the value of the selected option
 
     if (selectedAnswer === currentQuestion.correctAnswerIndex) {
       //Checks if selected option is correct in the quizdata.js
@@ -126,7 +126,7 @@ const handleAnswerSubmission = () => {
         displayQuestion(); //calls displayQuestion function to display next question
       });
     } else {
-      nextBtn.textContent = "View results"; //sets text to view result if the user is on the last question
+      nextBtn.textContent = "view results"; //sets text to view result if the user is on the last question
       nextBtn.addEventListener("click", () => {
         let resultMessage = ""; //variable for result message
         if (quizScore === 1) {
@@ -136,7 +136,7 @@ const handleAnswerSubmission = () => {
           //if the user has 0 or <1 show the message below
           resultMessage = `<p>You had ${quizScore} correct answers out of ${questions.length} questions.</p>`;
         }
-        mainContent.innerHTML = `<div class="resultCard"><div class="container"><h2>Result</h2><img src="img/results.png" alt="" role="presentation" class="resultImg" id="resultImg"/>${resultMessage}</div></div>`; //adds h2, image and result message to main
+        mainContent.innerHTML = `<h2>Result</h2><img src="img/results.png" alt="" role="presentation" class="result-img" id="result-img"/>${resultMessage}`; //adds h2, image and result message to main
 
         const backToMainBtn = document.createElement("button"); //create back to main button
         backToMainBtn.textContent = "Back to main"; // text in button
@@ -165,4 +165,9 @@ startQuizBtn.addEventListener("click", () => {
   currentQuestionIndex = 0;
   quizScore = 0;
   displayQuestion();
+});
+
+window.addEventListener("load", () => {
+  const spinner = document.getElementById("spinner-container");
+  spinner.style.display = "none";
 });
