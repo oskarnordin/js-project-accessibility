@@ -444,11 +444,19 @@ main h2 {
 
 footer {
   display: flex;
-  height: 4rem;
   width: 100%;
   background-color: var(--color-bg);
   justify-content: center;
   align-items: center;
+  padding: var(--spacing-xs) var(--spacing-xs) 0 var(--spacing-xs);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.footer-logo {
+  width: 40px;
+  height: auto;
+  opacity: 0.8;
 }
 
 .footer-text {
@@ -511,11 +519,9 @@ hr {
 
   footer {
     display: flex;
-    height: 4rem;
     width: 100%;
     background-color: var(--color-bg);
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-lg);
   }
 }
