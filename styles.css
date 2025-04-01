@@ -210,7 +210,23 @@ p {
   border-radius: var(--border-radius);
 }
 
+.result-heading {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  margin-bottom: var(--spacing-xs);
+  text-align: center;
+}
+
+.result-message {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
 .resultImg {
+  max-height: 500px;
+  max-width: var(--max-width);
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius);
