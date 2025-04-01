@@ -98,6 +98,7 @@ applyAnswerStyles(allOptions, currentQuestion.correctAnswerIndex)
   if (selectedOption) {
     const selectedAnswer = parseInt(selectedOption.value)
 
+
     if (selectedAnswer === currentQuestion.correctAnswerIndex) {
       feedbackMessage.textContent = currentQuestion.correctAnswerMessage;
       quizScore++;
@@ -125,6 +126,7 @@ startQuizBtn.addEventListener("click", () => {
   displayQuestion();
 });
 
+
 nextBtn.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length - 1) {
     currentQuestionIndex++;
@@ -149,3 +151,8 @@ backToMainBtn.addEventListener ("click", () => {
   currentQuestionIndex = 0;
   quizScore = 0;
 })
+
+window.addEventListener("load", () => {
+  const spinner = document.getElementById("spinner-container");
+  spinner.style.display = "none";
+});
