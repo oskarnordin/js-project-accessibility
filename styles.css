@@ -444,11 +444,19 @@ main h2 {
 
 footer {
   display: flex;
-  height: 200px;
+  height: 4rem;
   width: 100%;
   background-color: var(--color-bg);
   justify-content: center;
   align-items: center;
+}
+
+.footer-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  opacity: 0.6;
+  margin: 0;
+  line-height: 1.4;
 }
 
 hr {
@@ -503,7 +511,7 @@ hr {
 
   footer {
     display: flex;
-    height: 200px;
+    height: 4rem;
     width: 100%;
     background-color: var(--color-bg);
     justify-content: center;

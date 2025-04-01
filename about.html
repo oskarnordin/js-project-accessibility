@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Web Accessibility</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -13,36 +16,46 @@
     <header id="header">
       <div class="headerInner">
         <h1>Web Accessibility Quiz</h1>
-      <div class="headerContent">
-        <nav aria-label="mainMenu">
-        <a href="#mainContent" class="skip-link">Skip to main content</a> <a href="index.html">Home</a> <a href="about.html">About</a>
-        </nav>
-      </div>
+        <div class="headerContent">
+          <nav aria-label="mainMenu">
+            <a href="#mainContent" class="skip-link">Skip to main content</a>
+            <a href="index.html">Home</a> <a href="about.html">About</a>
+          </nav>
+        </div>
       </div>
     </header>
     <main id="mainContent">
-    <section id="introduction">
-      <div class="formControls introSection">
-        <div class="container">
-          <h2>About</h2>
-          <div class="aboutCard">
-              <img src="img/about.png" class="aboutImg" alt="">
-              <p>The goal of this website is to be as accessible as possible for all users and to serve as an educational tool to help people learn more about web accessibility. This includes ensuring a user-friendly experience for individuals using screen readers, keyboard navigation, and other assistive technologies. This project is part of a course focused on learning and applying key web accessibility principles. We have implemented features such as semantic HTML, keyboard navigation, ARIA roles for screen reader compatibility, and attention to color contrast.</p>
+      <section id="introduction">
+        <div class="formControls introSection">
+          <div class="container">
+            <h2>About</h2>
+            <div class="aboutCard">
+              <img src="img/about.png" class="aboutImg" alt="" />
+              <p>
+                The goal of this website is to be as accessible as possible for
+                all users and to serve as an educational tool to help people
+                learn more about web accessibility. This includes ensuring a
+                user-friendly experience for individuals using screen readers,
+                keyboard navigation, and other assistive technologies. This
+                project is part of a course focused on learning and applying key
+                web accessibility principles. We have implemented features such
+                as semantic HTML, keyboard navigation, ARIA roles for screen
+                reader compatibility, and attention to color contrast.
+              </p>
+            </div>
           </div>
-      </div>
         </div>
-    </section>
+      </section>
     </main>
 
+    <hr />
+
     <footer role="contentInfo">
-      <hr>
       <div class="footerContent">
-        <nav aria-label="Footer Menu">
-          <p>&copy; 2025 Web Accessibility Quiz. All rights reserved.</p>
-      </nav>
+        <p class="footer-text">For everyone. Built by Ida, Oskar and Tilde.</p>
       </div>
     </footer>
-    
+
     <script src="quizdata.js"></script>
     <script src="js/main.js"></script>
   </body>
