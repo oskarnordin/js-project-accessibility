@@ -148,6 +148,7 @@ backToMainBtn.addEventListener ("click", () => {
   quizContainer.hidden = true;
   resultCard.hidden = true;
   introductionSection.hidden = false;
+  window.location.hash = '#header'
   currentQuestionIndex = 0;
   quizScore = 0;
 })
