@@ -23,9 +23,13 @@ let quizScore = 0;
 
 //Function to update the progress bar
 const updateProgress = () => {
-  progressText.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
-  progressFill.style.width = `${((currentQuestionIndex + 1) / questions.length) * 100}%`;
-}
+  progressText.textContent = `Question ${currentQuestionIndex + 1} of ${
+    questions.length
+  }`;
+  progressFill.style.width = `${
+    ((currentQuestionIndex + 1) / questions.length) * 100
+  }%`;
+};
 
 //Function to render question
 const renderQuestionText = () => {
@@ -33,12 +37,12 @@ const renderQuestionText = () => {
   questionHeading.textContent = currentQuestion.question;
   const questionId = `question-heading-${currentQuestion.id}`;
   questionHeading.id = questionId;
-}
+};
 
 //Function to create fieldset and render question options
 const renderOptions = () => {
-  const currentQuestion = questions[currentQuestionIndex]
-  questionFieldset.innerHTML = ""
+  const currentQuestion = questions[currentQuestionIndex];
+  questionFieldset.innerHTML = "";
   currentQuestion.options.forEach((option, index) => {
     const optionId = `question-${currentQuestion.id}-option-${index}`;
     const inputRadio = document.createElement("input");
@@ -53,15 +57,15 @@ const renderOptions = () => {
     label.prepend(inputRadio);
     questionFieldset.appendChild(label);
   });
-}
+};
 
 //Function to display question
 const displayQuestion = () => {
   quizContainer.hidden = false;
-  bannerSection.style.display = 'none';
+  bannerSection.style.display = "none";
   introductionSection.hidden = true;
   resultCard.hidden = true;
-  
+
   updateProgress();
   renderQuestionText();
   renderOptions();
@@ -82,7 +86,7 @@ const applyAnswerStyles = (allOptions, correctAnswerIndex) => {
       label.classList.add("incorrect");
     }
   });
-}
+};
 
 //Function to handle submission
 const handleAnswerSubmission = () => {
@@ -97,7 +101,7 @@ const handleAnswerSubmission = () => {
   if (selectedOption) {
     applyAnswerStyles(allOptions, currentQuestion.correctAnswerIndex);
 
-    const selectedAnswer = parseInt(selectedOption.value)
+    const selectedAnswer = parseInt(selectedOption.value);
 
     if (selectedAnswer === currentQuestion.correctAnswerIndex) {
       feedbackMessage.textContent = currentQuestion.correctAnswerMessage;
@@ -109,7 +113,7 @@ const handleAnswerSubmission = () => {
     submitBtn.hidden = true;
 
     if (currentQuestionIndex < questions.length - 1) {
-      nextBtn.textContent = "Next question"
+      nextBtn.textContent = "Next question";
       nextBtn.hidden = false;
     } else {
       nextBtn.hidden = false;
@@ -143,14 +147,14 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-backToMainBtn.addEventListener ("click", () => {
-  bannerSection.style.display = 'flex'
+backToMainBtn.addEventListener("click", () => {
+  bannerSection.style.display = "flex";
   quizContainer.hidden = true;
   resultCard.hidden = true;
   introductionSection.hidden = false;
   currentQuestionIndex = 0;
   quizScore = 0;
-})
+});
 
 window.addEventListener("load", () => {
   const spinner = document.getElementById("spinner-container");
