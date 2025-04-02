@@ -390,7 +390,6 @@ p {
   height: 1rem;
 }
 
-
 .back-to-main-btn {
   background-color: var(--color-button-bg);
   color: var(--color-button-text);
@@ -515,12 +514,10 @@ hr {
     display: none;
   }
 
-
   .quiz-container {
     width: 100%;
     padding: var(--spacing-sm);
   }
-
 
   .cardsContainer {
     display: flex;
@@ -543,7 +540,6 @@ hr {
     align-items: center;
   }
 }
-
 
 .about-section {
   padding: var(--spacing-md) var(--spacing-sm);
@@ -572,48 +568,53 @@ hr {
   text-align: left;
 }
 
+.accessibility-quote {
+  font-weight: bold;
+}
+
 .about-img {
   max-width: 100%;
   width: clamp(200px, 50%, 500px); /* responsiv storlek */
   border-radius: var(--border-radius);
   height: auto;
 
-@media (min-width: 1200px){
-  .quiz-container {
-    width: 1200px;
-    padding: var(--spacing-sm);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
+  @media (min-width: 1200px) {
+    .quiz-container {
+      width: 1200px;
+      padding: var(--spacing-sm);
+    }
   }
 
-  .spinner {
-    display: none !important;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: #fff;
-    --color-bg: #000;
-    --color-button-bg: var(--color-text);
-    --color-button-text: var(--color-bg);
-    --color-correct: #356e3d;
-    --color-incorrect: #b6454d;
-  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
 
-  body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    .spinner {
+      display: none !important;
+    }
   }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-text: #fff;
+      --color-bg: #000;
+      --color-button-bg: var(--color-text);
+      --color-button-text: var(--color-bg);
+      --color-correct: #356e3d;
+      --color-incorrect: #b6454d;
+    }
 
-  a {
-    color: var(--color-text);
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    a {
+      color: var(--color-text);
+    }
   }
 }
