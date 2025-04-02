@@ -18,11 +18,18 @@
       <div class="headerInner">
         <h1>Web Accessibility Quiz</h1>
         <div class="headerContent">
-          <nav aria-label="Main menu">
-      
-            <a href="index.html">Home</a> <a href="about.html">About</a>
+          <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        
+          <nav id="main-nav" class="main-nav" aria-label="Main menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
           </nav>
         </div>
+        
       </div>
     </header>
 

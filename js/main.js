@@ -160,3 +160,48 @@ window.addEventListener("load", () => {
   const spinner = document.getElementById("spinner-container");
   spinner.style.display = "none";
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("main-nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", (e) => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("open");
+      toggle.classList.toggle("open");
+      e.stopPropagation();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("open")) {
+        toggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("open");
+        toggle.classList.remove("open");
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      const isClickInsideMenu = nav.contains(e.target);
+      const isClickOnToggle = toggle.contains(e.target);
+
+      if (
+        !isClickInsideMenu &&
+        !isClickOnToggle &&
+        nav.classList.contains("open")
+      ) {
+        toggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("open");
+        toggle.classList.remove("open");
+      }
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggle.setAttribute("aria-expanded", "false");
+          nav.classList.remove("open");
+          toggle.classList.remove("open");
+        });
+      });
+    });
+  }
+});
