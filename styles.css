@@ -301,20 +301,23 @@ p {
 
 .next-btn,
 .submit-btn {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
   position: relative;
   top: 50%; /* Adjust positioning */
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 200;
-  font-size: var(--font-size-base);
-  color: var(--color-bg);
-  background-color: var(--color-text);
-  border: 1px solid var(--color-text);
-  border-radius: var(--border-radius);
   cursor: pointer;
-  padding: var(--spacing-xs) var(--spacing-sm);
   transition: background-color 0.3s ease;
   z-index: 1;
+  width: 200px;
+  text-align: center;
+  font-family: inherit;
+  margin-top: 15px;
 }
 
 .nextButton:hover {
@@ -387,8 +390,7 @@ p {
   height: 1rem;
 }
 
-.submit-btn,
-.next-btn,
+
 .back-to-main-btn {
   background-color: var(--color-button-bg);
   color: var(--color-button-text);
