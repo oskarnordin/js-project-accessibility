@@ -211,7 +211,7 @@ p {
 }
 
 .result-heading {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-base);
   font-weight: 800;
   margin-bottom: var(--spacing-xs);
   text-align: center;
