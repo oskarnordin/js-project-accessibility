@@ -211,7 +211,7 @@ p {
 } */
 
 .result-heading {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-base);
   font-weight: 800;
   margin-bottom: var(--spacing-xs);
   text-align: center;
@@ -301,42 +301,59 @@ p {
 
 .next-btn,
 .submit-btn {
-  position: absolute;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  position: relative;
   top: 50%; /* Adjust positioning */
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 200;
-  font-size: var(--font-size-base);
-  color: var(--color-bg);
-  background-color: var(--color-text);
-  border: 1px solid var(--color-text);
-  border-radius: var(--border-radius);
   cursor: pointer;
-  padding: var(--spacing-xs) var(--spacing-sm);
   transition: background-color 0.3s ease;
   z-index: 1;
+  width: 200px;
+  text-align: center;
+  font-family: inherit;
+  margin-top: 15px;
 }
 
 .nextButton:hover {
   background-color: #333;
 }
 
+.quiz-container {
+  width: 80%;
+  padding: var(--spacing-sm);
+}
+
+.question-heading {
+  font-size: var(--font-size-base); /* eller sätt ett eget t.ex. 1.25rem */
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
 .question-fieldset {
   display: flex;
-  max-width: var(--max-width);
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-sm);
-  padding: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
   border: none;
 }
 
-main h2 {
+#intro-heading {
   font-size: var(--font-size-base); /* eller sätt ett eget t.ex. 1.25rem */
   margin: var(--spacing-sm);
   line-height: 1.4;
+}
+
+.feedback-message {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-sm);
 }
 
 .quiz-option,
@@ -373,8 +390,7 @@ main h2 {
   height: 1rem;
 }
 
-.submit-btn,
-.next-btn,
+
 .back-to-main-btn {
   background-color: var(--color-button-bg);
   color: var(--color-button-text);
@@ -428,7 +444,6 @@ main h2 {
 
 .progress-bar {
   width: 100%;
-  max-width: 400px;
   height: 10px;
   background-color: #ddd;
   border-radius: 5px;
@@ -500,9 +515,12 @@ hr {
     display: none;
   }
 
-  /* .aboutImg {
-    display: none;
-  } */
+
+  .quiz-container {
+    width: 100%;
+    padding: var(--spacing-sm);
+  }
+
 
   .cardsContainer {
     display: flex;
@@ -525,6 +543,7 @@ hr {
     align-items: center;
   }
 }
+
 
 .about-section {
   padding: var(--spacing-md) var(--spacing-sm);
@@ -558,6 +577,12 @@ hr {
   width: clamp(200px, 50%, 500px); /* responsiv storlek */
   border-radius: var(--border-radius);
   height: auto;
+
+@media (min-width: 1200px){
+  .quiz-container {
+    width: 1200px;
+    padding: var(--spacing-sm);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
