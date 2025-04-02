@@ -414,6 +414,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 80vh;
 }
 
 /* .submit-btn:hover,
@@ -590,9 +591,25 @@ hr {
   }
 }
 
+
+@media (max-width: 378px){
+  h1 {
+    font-size: var(--font-size-base);
+  }
+
+ .headerInner{
+ padding: 0;
+}
+
+.headerContent{
+  font: var(--font-size-sm);
+  font-weight: bold;
+}
+}
+
 @media (min-width: 1200px) {
   .quiz-container {
-    width: 1200px;
+    width: var(--max-width);
     padding: var(--spacing-sm);
   }
 }
