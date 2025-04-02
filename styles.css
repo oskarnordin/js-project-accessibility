@@ -301,7 +301,7 @@ p {
 
 .next-btn,
 .submit-btn {
-  position: absolute;
+  position: relative;
   top: 50%; /* Adjust positioning */
   left: 50%;
   transform: translate(-50%, -50%);
@@ -321,22 +321,36 @@ p {
   background-color: #333;
 }
 
+.quiz-container {
+  width: 80%;
+  padding: var(--spacing-sm);
+}
+
+.question-heading {
+  font-size: var(--font-size-base); /* eller sätt ett eget t.ex. 1.25rem */
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
 .question-fieldset {
   display: flex;
-  max-width: var(--max-width);
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-sm);
-  padding: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
   border: none;
 }
 
-main h2 {
+#intro-heading {
   font-size: var(--font-size-base); /* eller sätt ett eget t.ex. 1.25rem */
   margin: var(--spacing-sm);
   line-height: 1.4;
+}
+
+.feedback-message {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-sm);
 }
 
 .quiz-option,
@@ -428,7 +442,6 @@ main h2 {
 
 .progress-bar {
   width: 100%;
-  max-width: 400px;
   height: 10px;
   background-color: #ddd;
   border-radius: 5px;
@@ -500,6 +513,11 @@ hr {
     display: none;
   }
 
+  .quiz-container {
+    width: 100%;
+    padding: var(--spacing-sm);
+  }
+
   .aboutImg {
     display: none;
   }
@@ -523,6 +541,13 @@ hr {
     background-color: var(--color-bg);
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (min-width: 1200px){
+  .quiz-container {
+    width: 1200px;
+    padding: var(--spacing-sm);
   }
 }
 
