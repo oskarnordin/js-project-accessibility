@@ -1,6 +1,7 @@
 //HTML elements
 const startQuizBtn = document.getElementById("start-quiz-btn");
 const mainContent = document.getElementById("mainContent");
+const header = document.getElementById("header")
 const quizContainer = document.getElementById("quiz-container");
 const progressContainer = document.getElementById("progress-container");
 const progressText = document.getElementById("progress-text");
@@ -145,6 +146,7 @@ nextBtn.addEventListener("click", () => {
 
 backToMainBtn.addEventListener ("click", () => {
   bannerSection.style.display = 'flex'
+  header.scrollIntoView({behavior: 'smooth'})
   quizContainer.hidden = true;
   resultCard.hidden = true;
   introductionSection.hidden = false;
