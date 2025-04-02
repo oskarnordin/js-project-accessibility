@@ -525,3 +525,36 @@ hr {
     align-items: center;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .spinner {
+    display: none !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #fff;
+    --color-bg: #000;
+    --color-button-bg: var(--color-text);
+    --color-button-text: var(--color-bg);
+    --color-correct: #356e3d;
+    --color-incorrect: #b6454d;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  a {
+    color: var(--color-text);
+  }
+}
