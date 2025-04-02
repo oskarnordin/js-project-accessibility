@@ -17,45 +17,47 @@
       <div class="headerInner">
         <h1>Web Accessibility Quiz</h1>
         <div class="headerContent">
-          <nav aria-label="mainMenu">
+          <nav aria-label="Main menu">
             <a href="#mainContent" class="skip-link">Skip to main content</a>
             <a href="index.html">Home</a> <a href="about.html">About</a>
           </nav>
         </div>
       </div>
     </header>
+
     <main id="mainContent">
-      <section id="introduction">
+      <section class="about-section" aria-labelledby="about-heading">
         <div class="formControls introSection">
-          <div class="container">
-            <h2>About</h2>
-            <div class="aboutCard">
-              <img src="img/about.png" class="aboutImg" alt="" />
+          <div class="about-container">
+            <h2 id="about-heading">About</h2>
               <p>
-                The goal of this website is to be as accessible as possible for
-                all users and to serve as an educational tool to help people
-                learn more about web accessibility. This includes ensuring a
-                user-friendly experience for individuals using screen readers,
-                keyboard navigation, and other assistive technologies. This
-                project is part of a course focused on learning and applying key
-                web accessibility principles. We have implemented features such
-                as semantic HTML, keyboard navigation, ARIA roles for screen
-                reader compatibility, and attention to color contrast.
+                The goal of this website is to be as accessible as possible
+                for all users and to serve as an educational tool to help
+                people learn more about web accessibility. This includes
+                ensuring a user-friendly experience for individuals using
+                screen readers, keyboard navigation, and other assistive
+                technologies. This project is part of a course focused on
+                learning and applying key web accessibility principles. We
+                have implemented features such as semantic HTML, keyboard
+                navigation, ARIA roles for screen reader compatibility, and
+                attention to color contrast.
               </p>
-            </div>
+            <img
+              src="img/about.png"
+              role="presentation"
+              class="about-img"
+            />
           </div>
-        </div>
       </section>
     </main>
 
-    <hr />
+    <hr/>
 
     <footer role="contentInfo">
       <div class="footerContent">
         <p class="footer-text">For everyone. Built by Ida, Oskar and Tilde.</p>
         <img
           src="img/idaoskartilde.svg"
-          alt=""
           role="presentation"
           class="footer-logo"
         />
