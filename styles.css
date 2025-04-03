@@ -561,10 +561,6 @@ hr {
     text-align: left;
   }
 
- .principlesImg {
-    display: none;
-  }
-
   .quiz-container {
     width: 100%;
     padding: var(--spacing-sm);
@@ -572,15 +568,14 @@ hr {
 
   .cardsContainer {
     display: flex;
-    width: 600px;
-    flex-wrap: wrap;
-    justify-content: stretch;
+    flex-wrap: wrap; /* Ensures wrapping */
+    justify-content: center;
     gap: 20px;
     padding: var(--spacing-sm);
   }
 
   .cards {
-    width: 25%; /* Ensures full width */
+    width: 100%; /* Ensures each card takes full width on mobile */
   }
 
   footer {
@@ -591,6 +586,7 @@ hr {
     align-items: center;
   }
 }
+
 
 
 @media (max-width: 346px){
