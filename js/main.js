@@ -36,13 +36,18 @@ const renderQuestionText = () => {
   const questionId = `question-heading-${currentQuestion.id}`;
   questionHeading.id = questionId;
   questionContainer.appendChild(questionHeading);
-   questionFieldset.setAttribute("aria-labelledby", questionId);
+  questionFieldset.setAttribute("aria-labelledby", questionId);
 };
 
 //Function to create fieldset and render question options
 const renderOptions = () => {
   const currentQuestion = questions[currentQuestionIndex];
-  questionFieldset.innerHTML = "";
+  
+  const optionLabels = questionFieldset.querySelectorAll('.quiz-option');
+  optionLabels.forEach(label => {
+    questionFieldset.removeChild(label);
+  });
+
   currentQuestion.options.forEach((option, index) => {
     const optionId = `question-${currentQuestion.id}-option-${index}`;
     const inputRadio = document.createElement("input");
