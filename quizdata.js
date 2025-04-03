@@ -3,7 +3,7 @@ const questions = [
     id: 1,
     question:
       "Which of the following principles focuses on ensuring that users can access information through their senses?",
-    options: ["Operable", "Perception", "Understandable"],
+    options: ["Operable", "Perception", "Understandable", "Robust"],
     correctAnswerIndex: 1,
     correctAnswerMessage:
       "Correct! The perception principle focuses on ensuring that users can access information through their senses.",
@@ -14,7 +14,7 @@ const questions = [
     id: 2,
     question:
       "A website that allows users to navigate using only a keyboard is adhering to which principle?",
-    options: ["Robust", "Understandable", "Operable"],
+    options: ["Robust", "Understandable", "Operable", "Perception"],
     correctAnswerIndex: 2,
     correctAnswerMessage:
       "Correct! The operable principle focuses on ensuring that users can navigate and interact with content using a variety of input methods.",
@@ -25,7 +25,7 @@ const questions = [
     id: 3,
     question:
       "If the instructions on a form are clear and easy to follow, which accessibility principle is being addressed?",
-    options: ["Perception", "Understandable", "Robust"],
+    options: ["Perception", "Understandable", "Robust", "Operable"],
     correctAnswerIndex: 1,
     correctAnswerMessage:
       "Correct! The understandable principle focuses on ensuring that content is clear and easy to understand.",
@@ -36,7 +36,7 @@ const questions = [
     id: 4,
     question:
       "Ensuring that a website works correctly with screen readers falls under which of the following principles?",
-    options: ["Robust", "Operable", "Perception"],
+    options: ["Robust", "Operable", "Perception", "Understandable"],
     correctAnswerIndex: 0,
     correctAnswerMessage:
       "Correct! The robust principle focuses on ensuring that content is compatible with a wide range of user agents, including assistive technologies like screen readers.",
