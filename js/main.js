@@ -1,12 +1,9 @@
 //HTML elements
 const startQuizBtn = document.getElementById("start-quiz-btn");
-const mainContent = document.getElementById("mainContent");
 const quizContainer = document.getElementById("quiz-container");
-const progressContainer = document.getElementById("progress-container");
 const progressText = document.getElementById("progress-text");
-const progressBar = document.getElementById("progress-bar");
 const progressFill = document.getElementById("progress-fill");
-const questionHeading = document.getElementById("question-heading");
+const questionContainer = document.getElementById("question-container")
 const questionFieldset = document.getElementById("question-fieldset");
 const feedbackMessage = document.getElementById("feedback-message");
 const submitBtn = document.getElementById("submit-btn");
@@ -31,18 +28,26 @@ const updateProgress = () => {
   }%`;
 };
 
-//Function to render question
+//Function to create and render question heading
 const renderQuestionText = () => {
   const currentQuestion = questions[currentQuestionIndex];
-  questionHeading.textContent = currentQuestion.question;
+  const questionHeading = document.createElement("h2");
+  questionHeading.textContent = currentQuestion.question; 
   const questionId = `question-heading-${currentQuestion.id}`;
   questionHeading.id = questionId;
+  questionContainer.appendChild(questionHeading);
+  questionFieldset.setAttribute("aria-labelledby", questionId);
 };
 
 //Function to create fieldset and render question options
 const renderOptions = () => {
   const currentQuestion = questions[currentQuestionIndex];
-  questionFieldset.innerHTML = "";
+  
+  const optionLabels = questionFieldset.querySelectorAll('.quiz-option');
+  optionLabels.forEach(label => {
+    questionFieldset.removeChild(label);
+  });
+
   currentQuestion.options.forEach((option, index) => {
     const optionId = `question-${currentQuestion.id}-option-${index}`;
     const inputRadio = document.createElement("input");
@@ -67,6 +72,9 @@ const displayQuestion = () => {
   resultCard.hidden = true;
 
   updateProgress();
+
+  questionContainer.innerHTML = '';
+
   renderQuestionText();
   renderOptions();
 

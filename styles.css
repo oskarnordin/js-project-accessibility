@@ -333,10 +333,8 @@ p {
   padding: var(--spacing-sm);
 }
 
-.question-heading {
-  font-size: var(--font-size-base); /* eller sätt ett eget t.ex. 1.25rem */
+.question-container{
   margin-bottom: var(--spacing-sm);
-  line-height: 1.4;
 }
 
 .question-fieldset {

@@ -35,12 +35,14 @@
             <div class="progress-fill" id="progress-fill"></div>
           </div>
         </div>
-        <h2 id="question-heading" class="question-heading"></h2>
+        <div class="question-container" id="question-container" aria-live="polite"></div>
         <fieldset
           class="question-fieldset"
           id="question-fieldset"
-          aria-labelledby="question-heading"
-        ></fieldset>
+          aria-live="polite"
+        >
+          <legend class="sr-only">Question options</legend>
+        </fieldset>
         <div
           class="feedback-message"
           id="feedback-message"
@@ -88,8 +90,8 @@
         <div class="formControls introSection">
           <div class="container">
             <h2 id="intro-heading">Four Principles of Accessibility</h2>
-            <div class="cardsContainer" role="list">
-              <div class="cards" role="listitem">
+            <div class="cardsContainer">
+              <div class="cards">
                 <img
                   src="img/principle1.webp"
                   class="principlesImg"
@@ -101,7 +103,7 @@
                   to users in ways they can perceive.
                 </p>
               </div>
-              <div class="cards" role="listitem">
+              <div class="cards">
                 <img
                   src="img/principle2.webp"
                   class="principlesImg"
@@ -113,8 +115,7 @@
                   all users.
                 </p>
               </div>
-            
-              <div class="cards" role="listitem">
+              <div class="cards">
                 <img
                   src="img/principle3.webp"
                   class="principlesImg"
@@ -126,7 +127,7 @@
                   understandable.
                 </p>
               </div>
-              <div class="cards" role="listitem">
+              <div class="cards">
                 <img
                   src="img/principle4.webp"
                   class="principlesImg"
@@ -138,8 +139,6 @@
                   wide variety of user agents, including assistive technologies.
                 </p>
               </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
@@ -152,8 +151,8 @@
       aria-live="polite"
       hidden
     >
-      <div class="spinner" aria-label="Loading content"></div>
-      <span class="sr-only">Loading content...</span>
+      <div class="spinner" aria-hidden="true"></div>
+      <span class="sr-only">Loading content</span>
     </div>
     <hr />
     <footer role="contentInfo">
