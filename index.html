@@ -35,12 +35,14 @@
             <div class="progress-fill" id="progress-fill"></div>
           </div>
         </div>
-        <h2 id="question-heading" class="question-heading"></h2>
+        <div class="question-container" id="question-container"></div>
         <fieldset
           class="question-fieldset"
           id="question-fieldset"
           aria-labelledby="question-heading"
-        ></fieldset>
+        >
+        <legend class="sr-only">Question options</legend>
+        </fieldset>
         <div
           class="feedback-message"
           id="feedback-message"
@@ -88,7 +90,7 @@
         <div class="formControls introSection">
           <div class="container">
             <h2 id="intro-heading">Four Principles of Accessibility</h2>
-            <div class="cardsContainer" role="list">
+            <div class="cardsContainer">
               <div class="cards" role="listitem">
                 <img
                   src="img/HQprinciple1.png"
@@ -113,7 +115,6 @@
                   all users.
                 </p>
               </div>
-            
               <div class="cards" role="listitem">
                 <img
                   src="img/HQprinciple3.png"
@@ -138,8 +139,6 @@
                   wide variety of user agents, including assistive technologies.
                 </p>
               </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
